@@ -40,13 +40,13 @@
                     
         .topbar {
             backdrop-filter: blur(10px);
-            background-color: rgba(5, 0, 33, 0.7);
+            background-color: rgba(100, 0, 0, 0.4);;
             box-shadow: none;
         }
 
         .info {
             backdrop-filter: blur(10px);
-            background-color: rgba(5, 0, 33, 0.7);
+            background-color: rgba(100, 0, 0, 0.4);
         }
     
     </style>
@@ -62,13 +62,13 @@
             <body>
                 <video id="my-video" class="video-js vjs-fluid" playsinline loop controls preload="auto" width="640" height="264" poster="{{ page.poster }}" data-setup="{}">
                     <source src="{{ page.m3u8 }}" type="application/x-mpegURL">
+                    <source src="{{ page.offline }}" type="video/mp4">
                   <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
                 </video>
         <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"123ffff6c43846c5916f88b2da1d65ae","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </div>
 
         <div class="info">
-            <p id="viewer-count" style="color: rgb(255, 91, 91);">● 0</p>
             <h1 id="about-title">About {{ page.abtitle }}</h1>
             <div id="about-description"><p>{{ page.desc }}<br>This page was last updated on {{ site.time | date: "%a, %d %b %Y at %H:%M." }}</p>
         </div>
